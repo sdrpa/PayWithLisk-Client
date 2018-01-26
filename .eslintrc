@@ -1,0 +1,44 @@
+{
+   "env": {
+      "node": false, // Enable nodejs environment
+      "browser": true // Enable browser environment
+   },
+   "rules": {
+      "eqeqeq": 0,
+      "eol-last": 0,
+      "indent": [2, 3],
+      "no-console": ["error", { "allow": ["log", "warn", "error"] }],
+      "no-nested-ternary": 1,
+      "padded-blocks": [1, "never"],
+      "quotes": [2, "single", "avoid-escape"],
+      "quote-props": [2, "consistent-as-needed"],
+      "space-before-function-paren": [1, "never"],
+      "space-before-blocks": [1, "always"],
+
+      // React
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error"
+   },
+   "plugins": [
+      "react"
+   ],
+   "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+   ],
+   "settings": {
+      "react": {
+         "createClass": "createReactClass", // Regex for Component Factory to use, default to "createReactClass"
+         "pragma": "React" // Pragma to use, default to "React"
+      }
+   },
+   "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+         "jsx": true,
+         "modules": true,
+         "experimentalObjectRestSpread": true
+      }
+   }
+}
